@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊</title>
+    <style>
+    body 
+    {
+      margin: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .bear 
+    {
+      width: 400px;
+      height: 400px;
+      background-color: black;
+      border-radius: 50%;
+      position: relative;
+    }
+    .bear::before,
+    .bear::after
+     {
+      content: "";
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      border: 14px solid black;
+      border-radius: 50%;
+      position: absolute;
+      top: -15px;
+      box-sizing: border-box;
+      z-index: -1; 
+    }
+
+    .bear::before
+     {
+      left: 35px;
+    }
+
+    .bear::after
+     {
+      right: 35px;
+ }
+
+    .eye 
+    /* 連起來比較可愛 */
+    {
+      width: 80px; 
+      height: 80px;
+      background-color: black;
+      border: 14px solid white;
+      border-radius: 50%;
+      position: absolute;
+      top: 100px;
+      box-sizing: border-box;
+    }
+
+    .eye.left 
+    {
+      left: 100px;
+    }
+
+    .eye.right 
+    {
+      right: 100px;
+    }
+
+    .cheek
+     {
+      width: 90px;
+      height: 90px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      position: absolute;
+      top: 155px;
+    }
+
+    .cheek.left 
+    {
+      left: -15px;
+    }
+
+    .cheek.right 
+    {
+      right: -15px;
+    }
+
+    .snout 
+    {
+      width: 170px;
+      height: 125px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 155px;
+      transform: translateX(-50%);
+    }
+
+    .snout::before 
+    {
+      content: "";
+      width: 55px;
+      height: 38px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 18px;
+      transform: translateX(-50%);
+    }
+
+    .snout::after 
+    {
+      content: "";
+      width: 85px;
+      height: 42px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+    }
+
+    .v-shape 
+    {
+      width: 120px;
+      height: 60px;
+      background-color: white;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      clip-path: polygon(0 0, 28% 0, 50% 65%, 72% 0, 100% 0, 50% 100%);
+    }
+  </style>
+    
+</head>
+<body>
+
+    <div class="bear">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="cheek left"></div>
+    <div class="cheek right"></div>
+    <div class="snout"></div>
+    <div class="v-shape"></div>
+  </div>
+    
+</body>
+</html>
